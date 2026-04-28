@@ -1,0 +1,22 @@
+QUESTION: 4
+R(A, B, C, D, E, F) with FDs: AB -> C, C -> D, D -> BE, E -> F. Identify the Candidate Keys and the highest Normal Form.
+
+ANSWER:
+To find the candidate key, we start by checking what AB can determine using the given dependencies. 
+From AB we get C, then C gives D, D gives E, and E gives F. In this way, AB is able to determine 
+all the attributes in the relation. Also, A alone or B alone cannot determine everything, so AB is
+minimal. Hence, AB is the candidate key.
+
+Now looking at the normal form, A and B are the prime attributes, and the rest are non prime. There 
+is no partial dependency because C depends on the full key AB, so the relation is in Second Normal 
+Form. But after that, we can see a chain of dependencies like C to D, D to E, and E to F. This shows
+that non prime attributes depend on other non prime attributes, which is a transitive dependency. 
+Because of this, the relation does not satisfy Third Normal Form.
+
+So, the candidate key is AB and the highest normal form of the relation is Second Normal Form.
+
+Final Answer:
+Candidate Key is AB
+Highest Normal Form is Second Normal Form
+
+The relation is not in Third Normal Form because transitive dependencies exist.

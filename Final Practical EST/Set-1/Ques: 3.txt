@@ -1,0 +1,15 @@
+QUESTION: 3
+Define Materialized Views and explain a scenario where they outperform standard views.
+
+ANSWER:
+A materialized view is like a pre-saved result of a query. Instead of running the same query again 
+and again, the database stores the output, so it can be accessed quickly. In contrast, a normal view
+does not store data and executes the query every time it is used.
+
+Materialized views are mainly used when dealing with large data and complex queries, as they help 
+improve performance by avoiding repeated calculations.
+
+Scenario where it is better than a normal view:
+For example, if we have a large orders table and we frequently need to find the total sales of each 
+product, a normal view will calculate it every time, which can be slow. A materialized view stores 
+this result, so fetching the data becomes much faster, making it useful for reports and dashboards.
